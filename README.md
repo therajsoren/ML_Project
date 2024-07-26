@@ -44,16 +44,11 @@
     resized_img = cv2.resize(img, (new_width, new_height), interpolation=cv2.INTER_LINEAR)
 
 # Load the cascade classifiers
-
-    We will load load the pre-trained Haar cascade classifiers for face and eye detection.
-    These classifiers will be used later in the script to detect faces and eyes in the given image.
-
-    for tutorial on how to install refers to these link ->
-    https://scribehow.com/shared/Find_and_Download_Haar_Cascade_XML_Files_from_OpenCVGitHub__fm5Szmu_SI2LhTzwjcM9mw
-
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
     eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye_tree_eyeglasses.xml')
-
+    
+# for tutorial on how to install refers to these link ->
+    https://scribehow.com/shared/Find_and_Download_Haar_Cascade_XML_Files_from_OpenCVGitHub__fm5Szmu_SI2LhTzwjcM9mw
 
 #Convert to grayscale for detection
 
