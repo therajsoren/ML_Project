@@ -5,7 +5,7 @@
     Python  3.12.1
     OpenCV (cv2)
 
-# install OpenCv
+# Install OpenCv
 
     pip install opencv-python
 
