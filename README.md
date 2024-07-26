@@ -82,5 +82,5 @@ This project demonstrates how to use OpenCV for basic image processing tasks, in
     cv2.waitKey(0)
 # Close All Open Windows:
     cv2.destroyAllWindows()
-# Run the code
+# Run the code in terminal
     python faceDetection.py
