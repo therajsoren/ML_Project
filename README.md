@@ -1,4 +1,5 @@
 # Image Processing with OpenCV
+This project demonstrates how to use OpenCV for basic image processing tasks, including resizing images and detecting faces and eyes using Haar cascades. The script loads an image, resizes it, detects faces and eyes, and then saves the processed image.
 
 # Requirements
 
