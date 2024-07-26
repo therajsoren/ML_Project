@@ -9,12 +9,9 @@
 
 # install OpenCv
 
-    open the terminal and move to the directory in which the faceDetection.py is stored
-    then install OpenCV by writing these command in terminal
-
     pip install opencv-python
 
-# Write a code
+#Write a code
 
     In faceDetection.py write these line of code to import OpenCv
 
