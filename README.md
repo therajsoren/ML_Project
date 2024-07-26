@@ -47,8 +47,7 @@
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
     eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye_tree_eyeglasses.xml')
     
-# for tutorial on how to install refers to these link ->
-    https://scribehow.com/shared/Find_and_Download_Haar_Cascade_XML_Files_from_OpenCVGitHub__fm5Szmu_SI2LhTzwjcM9mw
+# For tutorial on how to install refers to these [https://scribehow.com/shared/Find_and_Download_Haar_Cascade_XML_Files_from_OpenCVGitHub__fm5Szmu_SI2LhTzwjcM9mw] link
 
 #Convert to grayscale for detection
 
