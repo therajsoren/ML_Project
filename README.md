@@ -11,15 +11,9 @@
 
     pip install opencv-python
 
-#Write a code
-
-    In faceDetection.py write these line of code to import OpenCv
+# Write a code
 
     import cv2
-
-    upon writing these code cv2 library is loaded which we going to use for face and eye detection
-
-    write these line of code after that
 
     file_path = "imagePath"
 
@@ -39,21 +33,13 @@
         print("Image loaded successfully.")
 
 # Define the size of the output window
-
-    we chose two variable one will be storing the desired width of the window
-    other will be storing desiring height of the window
-
-    After that we write these code to get the original dimension of the image
+    desired_width = 800  
+    desired_height = 600  
 
     (h, w) = img.shape[:2]
 
-    after we will calculate the aspect ratio of the image
-    aspect_ratio = w / h
 
-    and after that we check if check the condition if the width of the original image
-    is greater then height then the width of image will be set to desired width
-    and new height will be given by these formula desired_width / aspect_ratio
-    and reverse of it we will be doing if the height of image is greater than width
+    aspect_ratio = w / h
 
 # Resizing the image
 
@@ -85,36 +71,22 @@
 
     gray = cv2.cvtColor(resized_img, cv2.COLOR_BGR2GRAY)
 
-        cv2.cvtColor(): Function to convert the color space of an image.
-        resized_img: The resized image to be converted.
-        cv2.COLOR_BGR2GRAY: Conversion code to change the image from BGR to grayscale.
-        gray: The resulting grayscale image.
-        By converting the resized image to grayscale, you're preparing it for efficient and effective face and eye detection.
-
 # Detect faces
 
     faces = face_cascade.detectMultiScale(gray, 1.1, 4)
 
-    face_cascade.detectMultiScale(): Method to detect objects in the image.
-    gray: Grayscale image to be analyzed.
-    1.1: Scale factor for the image pyramid.
-    4: Minimum number of neighbors to retain a detection.
-    faces: List of detected faces, each represented by a rectangle (x, y, w, h).
-    By calling this method, you are identifying regions in the image where faces are
-    likely present, which can then be used for further processing like drawing rectangles around the faces.
-
 # Iterate over image
 
-    Iterate Over Faces:
+    for (x, y, w, h) in faces:
+        cv2.rectangle(resized_img, (x, y), (x + w, y + h), (255, 0, 0), 3)  # Draw rectangle around face
+        roi_gray = gray[y:y + h, x:x + w]
+        roi_color = resized_img[y:y + h, x:x + w]
+        
+        # Detect eyes within the face region
+        eyes = eye_cascade.detectMultiScale(roi_gray)
+        for (ex, ey, ew, eh) in eyes:
+            cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 5)  # Draw rectangle around eyes
 
-    Loop through each detected face.
-    Draw a blue rectangle around each face.
-    Define regions of interest (ROIs) for face regions in both grayscale and color images.
-    Detect Eyes:
-
-    Use the grayscale ROI to detect eyes within the face.
-    Loop through each detected eye and draw a green rectangle around each one in the color ROI.
-    By following these steps, you visually mark the detected faces and eyes on the resized image, making it easier to see the results of the detection process.\
 
 # Defining output path and saving the output image
 
