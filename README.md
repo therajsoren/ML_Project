@@ -1,8 +1,6 @@
-# ML_Project
+# Image Processing with OpenCV
 
-#Image Processing with OpenCV
-
-#Requirements
+# Requirements
 
     Python  3.12.1
     OpenCV (cv2)
@@ -43,10 +41,7 @@
 
 # Resizing the image
 
-    we declare a variable resized_img and assign it using cv2.resize which is openCv function to resize the images
-    cv2 function take three parameters which will be img(source images), (new_width , new_height), and interpolation method
-    which is method estimate the values between two known values . Here, cv2.INTER_LINEAR is used, which is a bilinear
-    interpolation method. It's a good balance between speed and quality for most resizing tasks
+    resized_img = cv2.resize(img, (new_width, new_height), interpolation=cv2.INTER_LINEAR)
 
 # Load the cascade classifiers
 
@@ -59,13 +54,6 @@
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
     eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye_tree_eyeglasses.xml')
 
-    cv2.CascadeClassifier(): Function to load pre-trained Haar cascade classifiers.
-    cv2.data.haarcascades: Path to the directory containing Haar cascade XML files.
-    haarcascade_frontalface_default.xml: XML file for the frontal face detection classifier.
-    haarcascade_eye_tree_eyeglasses.xml: XML file for the eye detection classifier (including eyeglasses).
-    face_cascade and eye_cascade: Initialized objects for face and eye detection, respectively.
-
-    These classifiers are now ready to be used to detect faces and eyes in images.
 
 #Convert to grayscale for detection
 
