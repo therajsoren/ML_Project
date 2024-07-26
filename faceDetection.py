@@ -7,7 +7,7 @@ Created on Fri Jul 25 15:17:33 2024
 import cv2
 
 
-image_path = "C:\\Projects\\sagar\\aman.jpg"
+image_path = r"C:\Projects\sagar\aman.jpg"
 
 # Load the image
 img = cv2.imread(image_path)
