@@ -33,14 +33,14 @@ Results: Display predicted closing prices in a DataFrame.
 Download the historical stock prices dataset from Yahoo Finance and save it as MSFT.csv.
 
 # Start by importing the necessary libraries:
-        import numpy as np
-        import pandas as pd
-        import matplotlib.pyplot as plt
-        import seaborn as sns
-        from sklearn.model_selection import train_test_split
-        from sklearn.tree import DecisionTreeRegressor
-        sns.set()
-        plt.style.use('fivethirtyeight')
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    from sklearn.model_selection import train_test_split
+    from sklearn.tree import DecisionTreeRegressor
+    sns.set()
+    plt.style.use('fivethirtyeight')
         
 # Load the data
 ## Load the dataset and display the first few rows:
