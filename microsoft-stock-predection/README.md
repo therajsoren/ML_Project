@@ -32,7 +32,7 @@ Results: Display predicted closing prices in a DataFrame.
    
 Download the historical stock prices dataset from Yahoo Finance and save it as MSFT.csv.
 
-Code Implementation:
+# Code Implementation:
     1. Import Libraries
         import numpy as np
         import pandas as pd
@@ -77,6 +77,7 @@ Code Implementation:
 Follow these steps to replicate the analysis and prediction model on your local machine. Ensure that the MSFT.csv file is in the same directory as your script.
 
 # Data
-    The analysis uses a CSV file named MSFT.csv containing Microsoft stock price data. Ensure this file is located in the same directory as your script. The CSV        file should contain the following columns: Date, Open, High, Low, and Close.
+
+The analysis uses a CSV file named MSFT.csv containing Microsoft stock price data. Ensure this file is located in the same directory as your script. The CSV        file should contain the following columns: Date, Open, High, Low, and Close.
 
 
