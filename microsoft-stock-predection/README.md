@@ -42,48 +42,48 @@ Download the historical stock prices dataset from Yahoo Finance and save it as M
         sns.set()
         plt.style.use('fivethirtyeight')
         
-## Load the data
-# Load the dataset and display the first few rows:
+# Load the data
+## Load the dataset and display the first few rows:
     data = pd.read_csv("MSFT.csv")
     print(data.head())
     
-## Visualize the data
-# Visualize the historical closing prices of Microsoft stock:
+# Visualize the data
+## Visualize the historical closing prices of Microsoft stock:
     plt.figure(figsize=(10, 4))
     plt.title("Microsoft Stock Prices")
     plt.xlabel("Date")
     plt.ylabel("Close")
     plt.plot(pd.to_datetime(data["Date"]), data["Close"])
     plt.show()
-## Compute Correlation Matrix
-# Calculate and display the correlation matrix, excluding the Date column:
+# Compute Correlation Matrix
+## Calculate and display the correlation matrix, excluding the Date column:
     corr_matrix = data.drop(columns=['Date']).corr()
     print(corr_matrix)
     
-## Plot Heatmap of Correlation Matrix
-# Create a heatmap to visualize the correlation matrix:
+# Plot Heatmap of Correlation Matrix
+## Create a heatmap to visualize the correlation matrix:
 
     sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
     plt.show()
-## Prepare Data for Modeling
-# Prepare the features and target variable, then convert them to numpy arrays:
+# Prepare Data for Modeling
+## Prepare the features and target variable, then convert them to numpy arrays:
     
     x = data[["Open", "High", "Low"]]
     y = data["Close"]
     x = x.to_numpy()
     y = y.to_numpy()
     y = y.reshape(-1, 1)
-## Split Data into Training and Testing Sets
-# Split the data into training and testing sets:
+# Split Data into Training and Testing Sets
+## Split the data into training and testing sets:
     xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.2, random_state=42)
     
-## Train the Model
-# Instantiate and train a Decision Tree Regressor model:
+# Train the Model
+## Instantiate and train a Decision Tree Regressor model:
     model = DecisionTreeRegressor()
     model.fit(xtrain, ytrain)
     ypred = model.predict(xtest)
-## Display Predicted Values
-# Create a DataFrame to display the predicted closing prices and print the first few rows:
+# Display Predicted Values
+## Create a DataFrame to display the predicted closing prices and print the first few rows:
 
     pred_data = pd.DataFrame(data={"Predicted Rate": ypred})
     print(pred_data.head())
@@ -97,6 +97,6 @@ Follow these steps to replicate the analysis and prediction model on your local 
 The analysis uses a CSV file named MSFT.csv containing Microsoft stock price data. Ensure this file is located in the same directory as your script. The CSV        file should contain the following columns: Date, Open, High, Low, and Close.
 
 # Run the code
-## run this code on the terminal . And make sure it is in the same directory as the source file.
+## Run this command on the terminal. And make sure it is in the same directory as the source file.
     python stock_microsoft.py
 
