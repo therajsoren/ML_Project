@@ -1,5 +1,5 @@
 """
-Created on Fri Jul 25 15:17:33 2024
+Created on Fri Jul 26 15:17:33 2024
 
 @author: 7rajk
 """
@@ -7,7 +7,7 @@ Created on Fri Jul 25 15:17:33 2024
 import cv2
 
 
-image_path = r"C:\Projects\sagar\aman.jpg"
+image_path = r"C:\Users\7rajk\Downloads\pexels-nkhajotia-1516680.jpg"
 
 # Load the image
 img = cv2.imread(image_path)
