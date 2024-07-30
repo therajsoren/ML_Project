@@ -17,12 +17,18 @@ Results: Display predicted closing prices in a DataFrame.
 
 # Requirements
     Python  3.12.1
-  
-# Libraries
-     numpy pandas matplotlib seaborn scikit-learn
+# Prerequisites
+Ensure you have the following Python libraries installed:
+    numpy
+    pandas
+    matplotlib
+    seaborn
+    scikit-learn
+    
+Install these libraries using pip if they are not already installed:
+    pip install numpy pandas matplotlib seaborn scikit-learn
 
-# Install Libraries
-     pip install numpy pandas matplotlib seaborn scikit-learn
+
    
 # Download the dataset:
    https://finance.yahoo.com/quote/MSFT/history/?fr=sycsrp_catchall
