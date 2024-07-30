@@ -50,7 +50,7 @@ This project demonstrates how to use OpenCV for basic image processing tasks, in
     
 # For tutorial on how to install refers to these [https://scribehow.com/shared/Find_and_Download_Haar_Cascade_XML_Files_from_OpenCVGitHub__fm5Szmu_SI2LhTzwjcM9mw]
 
-#Convert to grayscale for detection
+# Convert to grayscale for detection
 
     gray = cv2.cvtColor(resized_img, cv2.COLOR_BGR2GRAY)
 
