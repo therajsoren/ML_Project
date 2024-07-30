@@ -25,6 +25,7 @@ Results: Display predicted closing prices in a DataFrame.
      numpy pandas matplotlib seaborn scikit-learn
 
 # Install Libraries
+![Rocket Image](https://pngimg.com/image/13290)
      pip install numpy pandas matplotlib seaborn scikit-learn
    
 # Download the dataset:
