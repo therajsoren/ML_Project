@@ -10,4 +10,4 @@
      pip install numpy pandas matplotlib seaborn scikit-learn
    
 # Download the dataset:
-   [https://finance.yahoo.com/quote/MSFT/history/?fr=sycsrp_catchall]
+   https://finance.yahoo.com/quote/MSFT/history/?fr=sycsrp_catchall
