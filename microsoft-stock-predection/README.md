@@ -1,13 +1,13 @@
 # Microsoft Stock Price Analysis and Prediction
 
 # Requirements
-  Python  3.12.1
+    Python  3.12.1
   
 # Libraries
-   numpy pandas matplotlib seaborn scikit-learn
+     numpy pandas matplotlib seaborn scikit-learn
 
 # Install Libraries
-   pip install numpy pandas matplotlib seaborn scikit-learn
+     pip install numpy pandas matplotlib seaborn scikit-learn
    
 # Download the dataset:
 
