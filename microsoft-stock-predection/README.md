@@ -65,6 +65,7 @@ Download the historical stock prices dataset from Yahoo Finance and save it as M
 
     sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
     plt.show()
+    
 # Prepare Data for Modeling
 ## Prepare the features and target variable, then convert them to numpy arrays:
     
@@ -73,6 +74,7 @@ Download the historical stock prices dataset from Yahoo Finance and save it as M
     x = x.to_numpy()
     y = y.to_numpy()
     y = y.reshape(-1, 1)
+    
 # Split Data into Training and Testing Sets
 ## Split the data into training and testing sets:
     xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.2, random_state=42)
@@ -82,12 +84,14 @@ Download the historical stock prices dataset from Yahoo Finance and save it as M
     model = DecisionTreeRegressor()
     model.fit(xtrain, ytrain)
     ypred = model.predict(xtest)
+    
 # Display Predicted Values
 ## Create a DataFrame to display the predicted closing prices and print the first few rows:
 
     pred_data = pd.DataFrame(data={"Predicted Rate": ypred})
     print(pred_data.head())
-Execution
+    
+# Execution
 To execute the code, run each code block sequentially in a Python environment or script. Ensure that the MSFT.csv file is in the same directory as your script.
         
 Follow these steps to replicate the analysis and prediction model on your local machine. Ensure that the MSFT.csv file is in the same directory as your script.
