@@ -1,4 +1,4 @@
-# Microsoft Stock Price Analysis and Prediction
+# 🚀 Microsoft Stock Price Analysis and Prediction
 This project analyzes and predicts Microsoft (MSFT) stock prices using historical data. The steps include data loading, visualization, correlation analysis, and predictive modeling:
 
 Data Loading: Load historical stock prices using pandas and inspect the dataset.
