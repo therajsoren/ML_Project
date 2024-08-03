@@ -17,9 +17,6 @@ Results: Display predicted closing prices in a DataFrame.
 
 # Requirements
     Python  3.12.1
-
-# Requirements
-    Python  3.12.1
   
 # Libraries
      numpy pandas matplotlib seaborn scikit-learn
